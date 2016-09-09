@@ -3,7 +3,7 @@ const app = express();
 const request = require('request');
 const promiseLib = require('./promiseLib.js');
 const pttLib = require('./pttLib.js');
-const port = 3000;
+const port = process.env.PORT;
 
 app.get('/', (req, res) => {
     pttLib.getPttMenu(1, (result) => {
